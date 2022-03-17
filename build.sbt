@@ -9,7 +9,7 @@ lazy val commonSettings = Seq(
   Dependencies.core
 )
 
-lazy val root = (project in file("."))
+lazy val root = Project(id = "coco-scala-booster", base = file("."))
   .settings(commonSettings)
   .aggregate(lang)
 
