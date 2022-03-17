@@ -13,13 +13,19 @@ lazy val root = Project(id = "coco-scala-booster", base = file("."))
   .settings(commonSettings)
   .aggregate(lang)
 
+lazy val commons = (project in file("booster-commons"))
+  .settings(
+    commonSettings,
+    idePackagePrefix := Some("tech.iooo.coco"),
+    name := "booster-commons"
+  )
 
 lazy val lang = (project in file("booster-lang"))
   .settings(
     commonSettings,
     idePackagePrefix := Some("tech.iooo.coco"),
     name := "booster-lang"
-  )
+  ).dependsOn(commons)
 
 javacOptions ++= Seq("-encoding", "UTF-8")
 javaOptions in run += "-Xmx1G"
