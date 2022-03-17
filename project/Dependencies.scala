@@ -16,6 +16,7 @@ object Dependencies {
     val gson = "2.9.0"
     val logging = "3.9.4"
     val logback = "1.2.11"
+    val lombok = "1.18.22"
   }
 
   object Compiles {
@@ -26,7 +27,8 @@ object Dependencies {
       "org.apache.commons" % "commons-collections4" % Versions.commons_collections4,
       "com.google.code.gson" % "gson" % Versions.gson,
       "com.typesafe.scala-logging" %% "scala-logging" % Versions.logging,
-      "ch.qos.logback" % "logback-classic" % Versions.logback
+      "ch.qos.logback" % "logback-classic" % Versions.logback,
+      "org.projectlombok" % "lombok" % Versions.lombok
     )
   }
 
