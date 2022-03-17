@@ -1,0 +1,43 @@
+### Scala template
+*.class
+*.log
+
+### Simple Build Tool
+### http://www.scala-sbt.org/release/docs/Getting-Started/Directories.html#configuring-version-control
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+.history
+.cache
+.lib/
+.bsp
+
+# Created by .ignore support plugin (hsz.mobi)
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+target
+
+logs
+!.gitignore
+
+.flattened-pom.xml
+.DS_Store
+
+dependency-reduced-pom.xml
