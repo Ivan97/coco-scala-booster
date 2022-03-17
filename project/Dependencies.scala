@@ -1,4 +1,3 @@
-import Dependencies.Compiles.commons
 import sbt.Keys.libraryDependencies
 import sbt._
 
@@ -17,6 +16,7 @@ object Dependencies {
     val logging = "3.9.4"
     val logback = "1.2.11"
     val lombok = "1.18.22"
+    val akka_actor = "2.6.18"
   }
 
   object Compiles {
@@ -30,7 +30,11 @@ object Dependencies {
       "ch.qos.logback" % "logback-classic" % Versions.logback,
       "org.projectlombok" % "lombok" % Versions.lombok
     )
+    lazy val akka_actor: ModuleID = "com.typesafe.akka" %% "akka-actor" % Versions.akka_actor
   }
 
+  import Dependencies.Compiles._
+
   val core = libraryDependencies ++= commons
+  val akka = libraryDependencies ++= Seq(akka_actor)
 }

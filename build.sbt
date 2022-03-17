@@ -27,5 +27,13 @@ lazy val lang = (project in file("booster-lang"))
     name := "booster-lang"
   ).dependsOn(commons)
 
+lazy val akka = (project in file("booster-akka"))
+  .settings(
+    commonSettings,
+    Dependencies.akka,
+    idePackagePrefix := Some("tech.iooo.coco"),
+    name := "booster-akka"
+  ).dependsOn(commons)
+
 javacOptions ++= Seq("-encoding", "UTF-8")
 javaOptions in run += "-Xmx1G"
